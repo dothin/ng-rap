@@ -38,7 +38,7 @@ angular.module('ngRap', [])
 		var ngRap = {
 			check: function(url, data) {
 				var http = injector.get('$http');
-				http.get(url).success(function(result) {
+				http.get(url).then(function(result) {
 					RAP.checkerHandler.call({
 						data: data
 					}, result);
